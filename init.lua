@@ -1,0 +1,5 @@
+require('plugins.lazy')
+require('core.options')
+require('core.commands')
+require('core.mappings')
+require('core.configs')
