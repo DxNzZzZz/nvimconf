@@ -30,5 +30,6 @@ require('lazy').setup({
    require('plugins.harpoon2'),
    require('plugins.yanker'),
    require('plugins.fzf-native'),
-
+   require('plugins.liveserver'),
+   
 })

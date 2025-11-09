@@ -51,6 +51,9 @@ wk.add({
       {"<leader>fg","<cmd>Telescope live_grep<cr>",desc="Live Grep"},
 
       {"<leader>a",desc="add to harpoon"},
+      
+      {"<leader>o",desc="Open"},
+      {"<leader>ols","<cmd>LiveServerStart<cr><cmd>!xdg-open http://localhost:5555<cr>",desc="start Live Server and open it in browser"},
 })
 
 
