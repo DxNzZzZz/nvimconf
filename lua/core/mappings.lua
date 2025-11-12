@@ -7,11 +7,14 @@ function Map(mode, lhs, rhs, opts)
 end
 vim.g.mapleader = " "
 
+--window managment
 Map("n", "<C-h>", "<C-w>h")
 Map("n", "<C-j>", "<C-w>j")
 Map("n", "<C-k>", "<C-w>k")
 Map("n", "<C-l>", "<C-w>l")
- 
+--neotree
+Map("n","|","<cmd>Neotree reveal<cr>")
+
 Map("n", "<C-Up>", ":resize -2<CR>")
 Map("n", "<C-Down>", ":resize +2<CR>")
 Map("n", "<C-Left>", ":vertical resize -2<CR>")
@@ -49,11 +52,11 @@ wk.add({
       {"<leader>f",group="Find"},
       {"<leader>ff","<cmd>Telescope find_files hidden=true<cr>",desc="Find Files"},
       {"<leader>fg","<cmd>Telescope live_grep<cr>",desc="Live Grep"},
-
+      {"<leader>fc","<cmd>Telescope colorscheme<cr>",desc="Colorschemes"},
       {"<leader>a",desc="add to harpoon"},
-      
+
       {"<leader>o",desc="Open"},
-      {"<leader>ols","<cmd>LiveServerStart<cr><cmd>!xdg-open http://localhost:5555<cr>",desc="start Live Server and open it in browser"},
+      {"<leader>ols","<cmd>LiveServerStart<cr>",desc="start Live Server and open it in browser"},
 })
 
 

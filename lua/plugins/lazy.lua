@@ -15,6 +15,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
+--   require('plugins.bufferline'),
    require('plugins.telescope'),
    require('plugins.neotree'),
    require('plugins.treesitter'),
@@ -25,11 +26,11 @@ require('lazy').setup({
    require('plugins.lspconf'),
    require('plugins.which-key'),
    require('plugins.mini-icons'),
---   require('plugins.bufferline'),
-   require"plugins.alpha",
+   require('plugins.alpha'),
    require('plugins.harpoon2'),
    require('plugins.yanker'),
    require('plugins.fzf-native'),
    require('plugins.liveserver'),
-   
+   require('plugins.yanker'),
+
 })
