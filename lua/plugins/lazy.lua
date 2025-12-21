@@ -15,22 +15,20 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
---   require('plugins.bufferline'),
-   require('plugins.telescope'),
-   require('plugins.neotree'),
-   require('plugins.treesitter'),
-   require('plugins.colorscheme'),
-   require('plugins.nvim-cmp'),
-   require('plugins.mason'),
-   require('plugins.mason-lsp'),
-   require('plugins.lspconf'),
-   require('plugins.which-key'),
-   require('plugins.mini-icons'),
-   require('plugins.alpha'),
-   require('plugins.harpoon2'),
-   require('plugins.yanker'),
-   require('plugins.fzf-native'),
-   require('plugins.liveserver'),
-   require('plugins.yanker'),
-
+  require('plugins.lspconf'),  -- lspconfig FIRST (populates vim.lsp.config)
+  require('plugins.telescope'),
+  require('plugins.neotree'),
+  require('plugins.treesitter'),
+  require('plugins.colorscheme'),
+  require('plugins.nvim-cmp'),
+  require('plugins.mason'),
+  require('plugins.mason-lsp'),  -- mason-lsp AFTER lspconfig
+  require('plugins.which-key'),
+  require('plugins.mini-icons'),
+  require('plugins.alpha'),
+  require('plugins.harpoon2'),
+  require('plugins.yanker'),
+  require('plugins.fzf-native'),
+  require('plugins.liveserver'),
+  require('plugins.rustacea'),
 })

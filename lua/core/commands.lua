@@ -1,4 +1,3 @@
-
 vim.api.nvim_create_user_command("JavaRun", function()
   local file = vim.fn.expand("%:p") -- full path to current file
   local class = vim.fn.expand("%:t:r") -- filename without extension
@@ -49,3 +48,7 @@ vim.api.nvim_create_user_command("JavaRun", function()
     end,
   })
 end, { desc = "Compile and run current Java file with dependencies" })
+
+
+
+

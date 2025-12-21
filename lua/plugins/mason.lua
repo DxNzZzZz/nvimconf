@@ -3,9 +3,8 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       local path = require("mason-core.path")
-
       opts.install_root_dir = path.concat { vim.fn.stdpath "data", "mason" }
-      opts.PATH = "prepend"
+      opts.PATH = "append"
       opts.log_level = vim.log.levels.INFO
       opts.max_concurrent_installers = 4
       opts.registries = {
