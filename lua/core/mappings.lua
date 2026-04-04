@@ -23,6 +23,15 @@ Map("n", "<C-Right>", ":vertical resize +2<CR>")
 
 Map("n","<leader>e",":Neotree<CR>")
 
+vim.keymap.set('n', '<leader>cf', function()
+  vim.lsp.buf.code_action({
+    apply = true,
+    context = {
+      only = { "quickfix", "source.organizeImports" },
+    },
+  })
+end, { desc = "Apply all quick fixes" })
+
 local wk = require("which-key")
 wk.add({
 --save
