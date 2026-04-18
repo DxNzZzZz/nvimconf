@@ -1,14 +1,3 @@
 return{
-    {
-        "nvim-treesitter/nvim-treesitter",
-        config = function()
-            require'nvim-treesitter.configs'.setup ({
-                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-                auto_install = true,
-                highlight = {
-                    enable = true,
-              },
-      })
-      end,
-    },
+	{ "nvim-treesitter/nvim-treesitter", tag = "v0.10.0", lazy = false, build = ":TSUpdate" },
 }
