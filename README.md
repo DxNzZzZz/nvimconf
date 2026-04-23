@@ -1,1 +1,1 @@
-shit is my own nvim setup!!!!!!!!!
+nvim setup
